@@ -1,10 +1,10 @@
 # autassist
 
-Urgent Tasks
-
-  Write code flow chart (also needed for milestone presentation)
-  Set up GitHub 
-  Enable VNC remote login
+Urgent Tasks  
+  
+  Write code flow chart (also needed for milestone presentation)  
+  Set up GitHub   
+  Enable VNC remote login  
   Finish order for USB toggle
   Fix internet connection issue with the Pi 
   Chose an algorithm for sound management in Python
