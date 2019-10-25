@@ -38,7 +38,7 @@ Compleated tasks
   Installed noobs onto SD card
   Designed website 
 
-
+Lab report 
 Remember milestone presentation https://docs.google.com/presentation/d/10gvJ0Jii-6u89hT6Z798gWkAOI5IsFdATRlDL6KJrDM/edit#slide=id.p
 
 Link to technical NYUl library https://docs.google.com/spreadsheets/d/1X-Sj3W7rKKYeUzUMY5eqmQMuMU6Gh1op5HMCAlGhO-I/edit?ts=5d76dbee#gid=1190874785
