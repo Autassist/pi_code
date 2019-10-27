@@ -6,11 +6,12 @@ from scipy.signal import lfilter
 import numpy
 import wave
 import subprocess
-
+import sys
 import RPi.GPIO as gpio
 gpio.setmode(gpio.BCM)
 gpio.setup(18, gpio.OUT)
 
+noise_limit = 50
 
 ''' The following is similar to a basic CD quality
    When CHUNK size is 4096 it routinely throws an IOError.
@@ -115,6 +116,13 @@ def listen(old=0, error_count=0, min_decibel=100, max_decibel=0):
                 print('A-weighted: {:+.2f} dB'.format(new_decibel))
                 #max_value=read_max_value(MAX_DECIBEL_FILE_PATH)              # edith value in this text file
                 #update_max_if_new_is_larger_than_max(new_decibel, max_value)
+                if new_decibel > noise_limit:
+                    gpio.output(18, gpio.HIGH)
+                    print("Higher than limit")
+                else:
+                    gpio.output(18, gpio.LOW)
+                    print("Lower than limit")
+                
                 
 
 
