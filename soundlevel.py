@@ -116,6 +116,20 @@ def listen(old=0, error_count=0, min_decibel=100, max_decibel=0):
                 print('A-weighted: {:+.2f} dB'.format(new_decibel))
                 #max_value=read_max_value(MAX_DECIBEL_FILE_PATH)              # edith value in this text file
                 #update_max_if_new_is_larger_than_max(new_decibel, max_value)
+                try:
+                    f = open('/home/pi/Desktop/Soundmeter/decibel_data/max_decibel.txt', 'r')
+                except IOError as e:
+                    print(e)
+                else:
+                    value2 = f.read()
+                    f.close()
+                    print(value2)
+                try:
+                    noise_limit = int(value2)
+                except:
+                    noise_limit = 50
+                    print("invalid limit")
+                    
                 if new_decibel > noise_limit:
                     gpio.output(18, gpio.HIGH)
                     print("Higher than limit")
